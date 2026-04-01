@@ -18,7 +18,7 @@ export default function PublicDashboard() {
     // Fetch initial block & Watch new blocks
     useEffect(() => {
         if (!publicClient) return;
-        
+
         publicClient.getBlock({ blockTag: 'latest' }).then(block => {
             setRecentBlocks([block]);
         }).catch(console.error);
@@ -177,7 +177,7 @@ export default function PublicDashboard() {
                         Verified Ledger Wallets
                         <span className="flex items-center gap-1 text-[10px] bg-blue-50 text-blue-600 px-2 py-1 rounded-full">{whitelistedVoters.length} Listed</span>
                     </h2>
-                    
+
                     {whitelistedVoters.length === 0 ? (
                         <p className="text-xs text-center text-gray-400 py-4 px-2">Awaiting registrations to sync from mempool...</p>
                     ) : (
@@ -193,7 +193,7 @@ export default function PublicDashboard() {
                                             <span className="font-mono text-[10px] text-gray-500 truncate">{voter.walletAddress}</span>
                                         </div>
                                     </div>
-                                    <Copy className="w-3 h-3 text-gray-300 group-hover:text-blue-500 cursor-pointer flex-shrink-0" onClick={() => navigator.clipboard.writeText(voter.walletAddress)}/>
+                                    <Copy className="w-3 h-3 text-gray-300 group-hover:text-blue-500 cursor-pointer flex-shrink-0" onClick={() => navigator.clipboard.writeText(voter.walletAddress)} />
                                 </div>
                             ))}
                         </div>
@@ -209,7 +209,7 @@ export default function PublicDashboard() {
                     </h2>
                     <p className="text-gray-500 mt-1 text-sm">Real-time feed of cryptographic blocks mined on the local network.</p>
                 </div>
-                
+
                 <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
                     <div className="overflow-x-auto">
                         <table className="w-full text-sm text-left">
