@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #FAFAFA;
+    --color-foreground: #111111;
+    --color-primary: #000000;
+    --color-accent: #E5E5E5;
+    --color-success: #10B981;
+    --color-destructive: #EF4444;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.auth-container {
+    padding: 2.5rem;
+    max-width: 420px;
+    margin: 5rem auto;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-destructive {
+    background-color: transparent;
+    color: var(--color-destructive);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--color-destructive);
+    transition: all 0.2s ease;
+}
+
+.btn-destructive:hover {
+    background-color: var(--color-destructive);
+    color: white;
+}
