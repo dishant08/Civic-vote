@@ -10,9 +10,9 @@ This guide explains how to run the three components of the voting system locally
 
 ---
 
-## 1. Smart Contracts (Truffle Local Blockchain)
+## 1. Smart Contracts (Hardhat Local Blockchain)
 
-To simulate the blockchain, we will use Truffle's local development node.
+To simulate the blockchain, we will use Hardhat's local development node.
 
 1. Open Terminal 1
 2. Navigate to the contract folder:
@@ -21,9 +21,9 @@ To simulate the blockchain, we will use Truffle's local development node.
    ```
 3. Start the local Truffle development blockchain:
    ```bash
-   npx truffle develop
+   npx hardhat node
    ```
-4. Inside the `truffle(develop)>` console, compile and deploy the contracts:
+4. Inside the `hardhat(develop)>` console, compile and deploy the contracts:
    ```bash
    compile
    migrate
