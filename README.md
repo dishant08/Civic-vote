@@ -19,7 +19,7 @@ To simulate the blockchain, we will use Hardhat's local development node.
    ```bash
    cd /home/silence/antigravity/BLOCKCHAIN_VOTE/smart-contracts
    ```
-3. Start the local Truffle development blockchain:
+3. Start the local Hardhat development blockchain:
    ```bash
    npx hardhat node
    ```
